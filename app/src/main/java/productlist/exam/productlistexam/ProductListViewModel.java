@@ -7,6 +7,7 @@ import rx.schedulers.Schedulers;
 
 public class ProductListViewModel {
     private static final int DEFAULT_PAGE_SIZE = 20;
+    private int mPageIndex = 0;
 
     public interface OnDataRefreshListener {
         void onDataRefreshed(List<Product> products);
@@ -20,8 +21,22 @@ public class ProductListViewModel {
         mListener = listener;
     }
 
-    public void loadProductList(int pageIndex) {
+    public void loadFirstPageProductList() {
+        mPageIndex = 0;
+        loadProductList(mPageIndex);
+    }
+
+    public void loadNextPageProductList() {
+        mPageIndex++;
+        loadProductList(mPageIndex);
+    }
+
+    private void loadProductList(int pageIndex) {
         loadProductList(pageIndex, DEFAULT_PAGE_SIZE);
+    }
+
+    public boolean isFirstPage() {
+        return mPageIndex == 0;
     }
 
     public void loadProductList(int pageIndex, int pageSize) {

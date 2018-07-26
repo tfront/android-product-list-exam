@@ -1,9 +1,16 @@
 package productlist.exam.productlistexam;
 
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.constant.SpinnerStyle;
+import com.scwang.smartrefresh.layout.footer.BallPulseFooter;
+import com.scwang.smartrefresh.layout.header.BezierRadarHeader;
+import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
 import java.util.List;
 
@@ -18,6 +25,9 @@ public class ProductsActivity extends AppCompatActivity
     @Bind(R.id.recycler_view)
     RecyclerView mRecyclerView;
 
+    @Bind(R.id.refresh_layout)
+    RefreshLayout mRefreshLayout;
+
     ProductListAdapter mAdapter;
 
     @Override
@@ -25,21 +35,33 @@ public class ProductsActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_products);
         ButterKnife.bind(this);
+
+        mRefreshLayout.setRefreshHeader(new BezierRadarHeader(this).setEnableHorizontalDrag(true));
+        mRefreshLayout.setRefreshFooter(new BallPulseFooter(this).setSpinnerStyle(SpinnerStyle.Scale));
+        mRefreshLayout.setOnRefreshListener(refreshLayout -> mViewModel.loadFirstPageProductList());
+        mRefreshLayout.setOnLoadMoreListener(refreshLayout -> mViewModel.loadNextPageProductList());
+
+
         mAdapter = new ProductListAdapter();
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         mViewModel.setListener(this);
-        mViewModel.loadProductList(0);
+        mViewModel.loadFirstPageProductList();
     }
 
     @Override
     public void onDataRefreshed(List<Product> products) {
+        if (mViewModel.isFirstPage()) {
+            mRefreshLayout.finishRefresh();
+        } else {
+            mRefreshLayout.finishLoadMore();
+        }
         mAdapter.appendData(products);
     }
 
     @Override
     public void onDataLoadFailed(String reason) {
-
+        // TODO: error handling
     }
 }

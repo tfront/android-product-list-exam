@@ -17,13 +17,20 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true" />
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical|start" />
 
     <TextView
         android:id="@+id/product_name"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/icon"
-        android:layout_toStartOf="@id/product_price" />
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@id/product_icon"
+        android:layout_toStartOf="@id/product_price"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:gravity="center_vertical|start"
+        android:textSize="18sp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
 
 </RelativeLayout>
