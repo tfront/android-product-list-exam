@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="product_icon_size">40dp</dimen>
+    <dimen name="product_icon_size">100dp</dimen>
     <dimen name="round_corner_radius">10dp</dimen>
+    <dimen name="padding_size">10dp</dimen>
 </resources>

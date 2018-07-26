@@ -1,4 +1,4 @@
-package productlist.exam.productlistexam;
+package productlist.exam.productlistexam.model;
 
 import com.google.gson.annotations.SerializedName;
 

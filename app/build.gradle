@@ -32,6 +32,7 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofit_version"
     implementation "com.squareup.retrofit2:adapter-rxjava:$rootProject.retrofit_version"
     implementation "com.scwang.smartrefresh:SmartRefreshLayout:$rootProject.smart_refresh_layout_version"
+    implementation "org.parceler:parceler-api:$rootProject.parceler_version"
     implementation "io.reactivex:rxandroid:$rootProject.rx_android_version"
     annotationProcessor "com.jakewharton:butterknife:$rootProject.butter_knife_version"
     implementation "com.jakewharton:butterknife:$rootProject.butter_knife_version"
@@ -44,4 +45,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    debugImplementation "com.facebook.stetho:stetho:$rootProject.stetho_version"
+    debugImplementation "com.facebook.stetho:stetho-okhttp3:$rootProject.stetho_version"
 }

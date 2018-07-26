@@ -1,4 +1,4 @@
-package productlist.exam.productlistexam;
+package productlist.exam.productlistexam.model;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -6,5 +6,5 @@ import java.util.List;
 
 public class ProductList {
     @SerializedName("products")
-    List<Product> productList;
+    public List<Product> productList;
 }

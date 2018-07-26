@@ -1,5 +1,7 @@
-package productlist.exam.productlistexam;
+package productlist.exam.productlistexam.adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,13 +10,28 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.parceler.Parcels;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import productlist.exam.productlistexam.ProductActivity;
+import productlist.exam.productlistexam.R;
+import productlist.exam.productlistexam.constant.Constant;
+import productlist.exam.productlistexam.model.Product;
+import productlist.exam.productlistexam.utils.ImageUtils;
 
 public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+
+    private Context mApplicationContext;
+
+    public ProductListAdapter(Context context) {
+        mApplicationContext = context.getApplicationContext();
+        mProducts = new ArrayList<>();
+    }
+
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -28,8 +45,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         if (holder instanceof ProductItemViewHolder) {
             Product product = mProducts.get(position);
             ProductItemViewHolder productItemViewHolder = (ProductItemViewHolder) holder;
-            PicassoWrapper.loadUrlIntoImageView(
-                    "http://s3-ap-southeast-1.amazonaws.com/media.redmart.com/newmedia/150x" + product.productImage.iconUrl,
+            ImageUtils.loadUrlIntoImageView(ImageUtils.makeIconUrl(product.productImage.iconUrl),
                     productItemViewHolder.icon);
             productItemViewHolder.name.setText(product.productName);
             productItemViewHolder.price.setText(String.valueOf(product.productPricing.price));
@@ -43,8 +59,8 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
     private List<Product> mProducts;
 
-    public ProductListAdapter() {
-        mProducts = new ArrayList<>();
+    public void clearData() {
+        mProducts.clear();
     }
 
     public void appendData(List<Product> products) {
@@ -52,6 +68,12 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         int newItemCount = products.size();
         mProducts.addAll(products);
         notifyItemRangeInserted(currentSize, newItemCount);
+    }
+
+    public void onItemClick(int position) {
+        Intent intent = new Intent(mApplicationContext, ProductActivity.class);
+        intent.putExtra(Constant.KEY_PRODUCT_ID, String.valueOf(mProducts.get(position).productId));
+        mApplicationContext.startActivity(intent);
     }
 
     class ProductItemViewHolder extends RecyclerView.ViewHolder {
@@ -65,6 +87,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         public ProductItemViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
+            itemView.setOnClickListener(view -> onItemClick(getAdapterPosition()));
         }
     }
 }

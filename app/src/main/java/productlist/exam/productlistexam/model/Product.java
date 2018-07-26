@@ -1,7 +1,4 @@
-package productlist.exam.productlistexam;
-
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
+package productlist.exam.productlistexam.model;
 
 import com.google.gson.annotations.SerializedName;
 

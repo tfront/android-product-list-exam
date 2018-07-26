@@ -1,6 +1,5 @@
 package productlist.exam.productlistexam;
 
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,12 +9,14 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.constant.SpinnerStyle;
 import com.scwang.smartrefresh.layout.footer.BallPulseFooter;
 import com.scwang.smartrefresh.layout.header.BezierRadarHeader;
-import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import productlist.exam.productlistexam.adapter.ProductListAdapter;
+import productlist.exam.productlistexam.model.Product;
+import productlist.exam.productlistexam.viewmodel.ProductListViewModel;
 
 public class ProductsActivity extends AppCompatActivity
         implements ProductListViewModel.OnDataRefreshListener {
@@ -42,7 +43,7 @@ public class ProductsActivity extends AppCompatActivity
         mRefreshLayout.setOnLoadMoreListener(refreshLayout -> mViewModel.loadNextPageProductList());
 
 
-        mAdapter = new ProductListAdapter();
+        mAdapter = new ProductListAdapter(this);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -53,6 +54,7 @@ public class ProductsActivity extends AppCompatActivity
     @Override
     public void onDataRefreshed(List<Product> products) {
         if (mViewModel.isFirstPage()) {
+            mAdapter.clearData();
             mRefreshLayout.finishRefresh();
         } else {
             mRefreshLayout.finishLoadMore();

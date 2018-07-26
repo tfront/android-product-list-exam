@@ -5,6 +5,7 @@ import android.app.Application;
 import android.os.Process;
 import android.support.annotation.NonNull;
 
+import com.facebook.stetho.Stetho;
 import com.squareup.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 
@@ -14,7 +15,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import okhttp3.OkHttpClient;
+import productlist.exam.productlistexam.network.HttpClient;
 
 public class ProductListApplication extends Application {
 
@@ -34,6 +35,7 @@ public class ProductListApplication extends Application {
     private void initApplication() {
         HttpClient.setContext(this);
         initPicasso();
+        Stetho.initializeWithDefaults(this);
     }
 
     private static final int CPU_COUNT = Runtime.getRuntime().availableProcessors();

@@ -1,18 +1,16 @@
-package productlist.exam.productlistexam;
+package productlist.exam.productlistexam.network;
 
 import android.content.Context;
-import android.os.Process;
-import android.support.annotation.NonNull;
 
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.ThreadPoolExecutor;
+import com.facebook.stetho.Stetho;
+import com.facebook.stetho.okhttp3.StethoInterceptor;
+
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import okhttp3.ConnectionPool;
 import okhttp3.Dispatcher;
 import okhttp3.OkHttpClient;
+import productlist.exam.productlistexam.ProductListApplication;
 
 public class HttpClient {
 
@@ -57,6 +55,7 @@ public class HttpClient {
                     .dispatcher(new Dispatcher(ProductListApplication.ASYNC_THREAD_POOL))
                     .connectionPool(new ConnectionPool(DEFAULT_KEEP_ALIVE_COUNT,
                             DEFAULT_KEEP_ALIVE_DURATION, TimeUnit.SECONDS));
+            builder.addNetworkInterceptor(new StethoInterceptor());
             mOKHttpClient = builder.build();
         }
     }

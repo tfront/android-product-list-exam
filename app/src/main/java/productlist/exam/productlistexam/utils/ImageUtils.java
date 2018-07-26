@@ -1,8 +1,4 @@
-/*
- * Copyright (c) 2015 App Annie Inc. All rights reserved.
- */
-
-package productlist.exam.productlistexam;
+package productlist.exam.productlistexam.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
@@ -15,7 +11,16 @@ import android.widget.ImageView;
 
 import com.squareup.picasso.Transformation;
 
-public class PicassoWrapper {
+import productlist.exam.productlistexam.ProductListApplication;
+import productlist.exam.productlistexam.R;
+import productlist.exam.productlistexam.constant.Constant;
+
+public class ImageUtils {
+
+    public static String makeIconUrl(final String iconUrl) {
+        return Constant.IMAGE_URL_BASE + iconUrl;
+    }
+
     public static final String PICASSO_TAG = "picasso_tag";
     private static Transformation mTransformation;
     private static int sSideLength = 0;
@@ -78,43 +83,4 @@ public class PicassoWrapper {
         }
     }
 
-    public static class RoundTransformation implements Transformation {
-        private int radius;
-
-        public RoundTransformation(int radius) {
-            this.radius = radius;
-        }
-
-        @Override
-        public Bitmap transform(Bitmap source) {
-            if (source.getWidth() != source.getHeight()) {
-                return source;
-            }
-            int side = radius * 2;
-            Bitmap input = Bitmap.createScaledBitmap(source, side, side, false);
-
-            final Paint paint = new Paint();
-            paint.setAntiAlias(true);
-            paint.setShader(new BitmapShader(input, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP));
-
-            Bitmap output = Bitmap.createBitmap(side, side, Bitmap
-                    .Config.ARGB_8888);
-            Canvas canvas = new Canvas(output);
-            canvas.drawRoundRect(new RectF(0, 0, side, side), radius, radius, paint);
-
-            if (input != output) {
-                input.recycle();
-            }
-            if (source != output) {
-                source.recycle();
-            }
-
-            return output;
-        }
-
-        @Override
-        public String key() {
-            return "round";
-        }
-    }
 }

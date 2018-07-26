@@ -1,7 +1,11 @@
-package productlist.exam.productlistexam;
+package productlist.exam.productlistexam.viewmodel;
 
 import java.util.List;
 
+import productlist.exam.productlistexam.ProductListApplication;
+import productlist.exam.productlistexam.model.Product;
+import productlist.exam.productlistexam.network.ProductService;
+import productlist.exam.productlistexam.network.RetrofitFactory;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
@@ -54,9 +58,6 @@ public class ProductListViewModel {
                             if (mListener != null) {
                                 mListener.onDataLoadFailed(throwable.getMessage());
                             }
-                        },
-                        () -> {
-                            mListener = mListener;
                         }
                 );
     }
