@@ -43,7 +43,7 @@ public class ProductListViewModel {
         return mPageIndex == 0;
     }
 
-    public void loadProductList(int pageIndex, int pageSize) {
+    private void loadProductList(int pageIndex, int pageSize) {
         ProductService service = RetrofitFactory.getRetrofit().create(ProductService.class);
         service.getProducts(pageIndex, pageSize)
                 .subscribeOn(Schedulers.from(ProductListApplication.ASYNC_THREAD_POOL))

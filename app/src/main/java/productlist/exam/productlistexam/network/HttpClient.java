@@ -1,5 +1,6 @@
 package productlist.exam.productlistexam.network;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 
 import com.facebook.stetho.Stetho;
@@ -17,6 +18,7 @@ public class HttpClient {
     private static final long DEFAULT_KEEP_ALIVE_DURATION = 5 * 60; // 5 min
     private static final int DEFAULT_KEEP_ALIVE_COUNT = 5;
 
+    @SuppressLint("StaticFieldLeak")
     private static volatile HttpClient mInstance = null;
     private OkHttpClient mOKHttpClient = null;
 
@@ -34,12 +36,6 @@ public class HttpClient {
         }
 
         return mInstance;
-    }
-
-    private static Context sContext;
-
-    public static void setContext(Context context) {
-        sContext = context;
     }
 
     public OkHttpClient getOKHttpClient() {

@@ -26,10 +26,14 @@ public class ImageUtils {
     private static int sSideLength = 0;
 
     public static void loadUrlIntoImageView(String url, ImageView imageView) {
+        loadUrlIntoImageView(url, imageView, true);
+    }
+
+    public static void loadUrlIntoImageView(String url, ImageView imageView, boolean roundCornor) {
         if (!TextUtils.isEmpty(url)) {
             if (mTransformation == null) {
-                mTransformation = new RoundCornerTransformation(imageView.getResources()
-                        .getDimensionPixelSize(R.dimen.round_corner_radius));
+                mTransformation = new RoundCornerTransformation(roundCornor ? imageView.getResources()
+                        .getDimensionPixelSize(R.dimen.round_corner_radius) : 0);
             }
             if (sSideLength == 0) {
                 sSideLength = imageView.getResources().getDimensionPixelSize(R.dimen.product_icon_size);

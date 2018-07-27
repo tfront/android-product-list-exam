@@ -15,8 +15,6 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import productlist.exam.productlistexam.network.HttpClient;
-
 public class ProductListApplication extends Application {
 
     @Override
@@ -33,7 +31,6 @@ public class ProductListApplication extends Application {
     }
 
     private void initApplication() {
-        HttpClient.setContext(this);
         initPicasso();
         Stetho.initializeWithDefaults(this);
     }
@@ -60,5 +57,4 @@ public class ProductListApplication extends Application {
                 .downloader(new OkHttp3Downloader(this))
                 .build();
     }
-
 }
