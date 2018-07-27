@@ -34,6 +34,7 @@ dependencies {
     implementation "com.scwang.smartrefresh:SmartRefreshLayout:$rootProject.smart_refresh_layout_version"
     implementation "org.parceler:parceler-api:$rootProject.parceler_version"
     implementation "io.reactivex:rxandroid:$rootProject.rx_android_version"
+    implementation "com.romandanylyk:pageindicatorview:1.0.1"
     annotationProcessor "com.jakewharton:butterknife:$rootProject.butter_knife_version"
     implementation "com.jakewharton:butterknife:$rootProject.butter_knife_version"
     implementation fileTree(include: ['*.jar'], dir: 'libs')

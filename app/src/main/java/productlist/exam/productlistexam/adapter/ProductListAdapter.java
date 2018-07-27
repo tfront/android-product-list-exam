@@ -1,5 +1,6 @@
 package productlist.exam.productlistexam.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -40,6 +41,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         return new ProductItemViewHolder(view);
     }
 
+    @SuppressLint("DefaultLocale")
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         if (holder instanceof ProductItemViewHolder) {
@@ -48,7 +50,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             ImageUtils.loadUrlIntoImageView(ImageUtils.makeIconUrl(product.productImage.iconUrl),
                     productItemViewHolder.icon);
             productItemViewHolder.name.setText(product.productName);
-            productItemViewHolder.price.setText(String.valueOf(product.productPricing.price));
+            productItemViewHolder.price.setText(String.format("%.2f", product.productPricing.price));
             productItemViewHolder.vendorName.setText(product.filter.vendorName);
         }
     }

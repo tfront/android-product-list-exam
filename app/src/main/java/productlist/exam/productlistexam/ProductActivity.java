@@ -6,7 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
+
+import com.rd.PageIndicatorView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +30,7 @@ public class ProductActivity extends AppCompatActivity implements ProductDetailV
 
     private ProductDetailViewModel mViewModel = new ProductDetailViewModel();
 
-    @Bind(R.id.viewpager)
+    @Bind(R.id.view_pager)
     ViewPager mViewPager;
 
     @Bind(R.id.desc_list_recycler_view)
