@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Toast;
 
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.constant.SpinnerStyle;
@@ -64,6 +65,6 @@ public class ProductsActivity extends AppCompatActivity
 
     @Override
     public void onDataLoadFailed(String reason) {
-        // TODO: error handling
+        Toast.makeText(this, reason, Toast.LENGTH_LONG).show();
     }
 }

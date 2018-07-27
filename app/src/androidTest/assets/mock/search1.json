@@ -1,0 +1,528 @@
+{
+  "products": [
+    {
+      "pricing": {
+        "on_sale": 0,
+        "price": 2.1,
+        "promo_price": 0.0,
+        "savings": 15.0
+      },
+      "id": 106678,
+      "title": "MOCK - Prime Cavendish Bananas",
+      "desc": "Premium Highland Cavendish Banana - the perfect energy boosting snack, high in potassium.",
+      "measure": {
+        "wt_or_vol": "1 kg",
+        "size": 0.0
+      },
+      "details": {
+        "is_new": 0,
+        "status": 1,
+        "prod_type": 0,
+        "uri": "prime-cavendish-bananas-106678",
+        "country_of_origin": "Mexico",
+        "storage_class": "Fresh6-10"
+      },
+      "images": [
+        {
+          "h": 0,
+          "w": 0,
+          "name": "/i/m/9201708220856_0053_1503664001105.jpg",
+          "position": 0
+        },
+        {
+          "h": 0,
+          "w": 0,
+          "name": "/i/m/9201708220856_0054_1503664036907.jpg",
+          "position": 1
+        }
+      ],
+      "warehouse": {
+        "measure": {
+          "vol_metric_alt": "",
+          "wt_metric": "kg",
+          "vol_metric": "",
+          "wt": 1.0,
+          "w": 0.0,
+          "l": 0.0,
+          "h": 0.0
+        }
+      },
+      "sku": "9201708220856",
+      "filters": {
+        "is_organic": 0,
+        "brand_uri": "prime-asia",
+        "mfr_name": "TianSheng",
+        "frequency": 36273,
+        "brand_name": "Prime Asia",
+        "vendor_name": "Tian",
+        "trending_frequency": 6463,
+        "country_of_origin": "Mexico",
+        "holiday_brunch": "Fruit Platter Ideas",
+        "potluck": "Fruit Platter Ideas"
+      },
+      "categories": [
+        243,
+        5719,
+        10490,
+        11594,
+        12561,
+        12612,
+        12653,
+        13234,
+        14168,
+        14360,
+        9023,
+        14377,
+        14378,
+        14497
+      ],
+      "types": [
+        5769,
+        5735,
+        5785
+      ],
+      "category_tags": [
+        "fresh-produce",
+        "fresh-fruits",
+        "tropical-fruits",
+        "bananas",
+        "bananas-5769",
+        "large-fruits",
+        "bananas-5785",
+        "direct-retail",
+        "comfort-food",
+        "freshbdit",
+        "energy-superheroes",
+        "popsicles",
+        "ultimate-brunch",
+        "healthy-meals-on-the-go",
+        "mgm",
+        "featured-buyers-choice",
+        "mgmf",
+        "mgmm",
+        "trending-top-picks"
+      ],
+      "img": {
+        "h": 0,
+        "w": 0,
+        "name": "/i/m/9201708220856_0053_1503664001105.jpg",
+        "position": 0
+      },
+      "product_life": {
+        "time": 3,
+        "metric": "D",
+        "is_minimum": true,
+        "time_including_delivery": 4
+      },
+      "description_fields": {
+        "secondary": [],
+        "primary": [
+          {
+            "name": "Delivery & Handling",
+            "content": "From the moment you place your order, the race for us to get your produce to you fresh and fast begins! | Time > We cut out the supermarkets from our supply chain so your food arrives faster and fresher. | Handling > Because we skip the supermarkets, food handling is greatly minimised. At RedMart, your food is handled with care by trained professionals. | Temperature > Our unbroken cold chain means your fresh produce is received, stored and delivered in optimum temperature to your doorstep. | If you are not 100% happy, we'll gladly refund you for any freshness issues. Contact Customer Support at: rm.sg/customer-support within 2 days of delivery. | Our Freshness Promise: rm.sg/freshnesspromise."
+          },
+          {
+            "name": "Country of Origin",
+            "content": "Mexico"
+          }
+        ]
+      },
+      "max_days_on_shelf": 7,
+      "promotions": [
+        {
+          "id": 213995,
+          "type": 3,
+          "savings_text": "Mix 3 Save 15%",
+          "promo_label": "Buy Any 3 and SAVE 15%",
+          "current_product_group_id": 1,
+          "products": [
+            {
+              "images": [
+                {
+                  "name": "/i/m/8885003331120_0001_1508819051917.jpg"
+                },
+                {
+                  "name": "/i/m/9201802151506_0004_1516703454136.jpg"
+                },
+                {
+                  "name": "/i/m/9201802152503_0001_1516703468518.jpg"
+                }
+              ],
+              "group_id": 1,
+              "min_qty": 3
+            }
+          ]
+        }
+      ],
+      "pr": 3,
+      "inventory": {
+        "atp_status": 0,
+        "max_sale_qty": 48,
+        "qty_in_carts": 0,
+        "qty_in_stock": 48,
+        "stock_status": 1,
+        "stock_type": 0,
+        "atp_lots": [
+          {
+            "from_date": "2018-07-26T02:43:02Z",
+            "to_date": "2018-07-27T15:59:59Z",
+            "stock_status": 0,
+            "qty_in_stock": 0,
+            "qty_in_carts": 0
+          },
+          {
+            "from_date": "2018-07-26T02:43:02Z",
+            "to_date": "2018-07-28T15:59:59Z",
+            "stock_status": 1,
+            "qty_in_stock": 37,
+            "qty_in_carts": 0
+          },
+          {
+            "from_date": "2018-07-26T02:43:02Z",
+            "to_date": "2018-07-29T15:59:59Z",
+            "stock_status": 1,
+            "qty_in_stock": 48,
+            "qty_in_carts": 0
+          },
+          {
+            "from_date": "2018-07-26T02:43:02Z",
+            "to_date": "2018-07-30T15:59:59Z",
+            "stock_status": 1,
+            "qty_in_stock": 48,
+            "qty_in_carts": 0
+          },
+          {
+            "from_date": "2018-07-28T05:00:00Z",
+            "to_date": "2018-07-31T15:59:59Z",
+            "stock_status": 1,
+            "qty_in_stock": 48,
+            "qty_in_carts": 0
+          },
+          {
+            "from_date": "2018-08-01T05:00:00Z",
+            "to_date": "2018-08-30T15:59:59Z",
+            "stock_status": 1,
+            "qty_in_stock": 48,
+            "qty_in_carts": 0
+          }
+        ],
+        "next_available_date": "2018-07-26T02:43:02Z",
+        "limited_stock_status": 0,
+        "delivery_option": "standard"
+      },
+      "inventories": [
+        {
+          "atp_status": 0,
+          "max_sale_qty": 48,
+          "qty_in_carts": 0,
+          "qty_in_stock": 48,
+          "stock_status": 1,
+          "stock_type": 0,
+          "atp_lots": [
+            {
+              "from_date": "2018-07-26T02:43:02Z",
+              "to_date": "2018-07-27T15:59:59Z",
+              "stock_status": 0,
+              "qty_in_stock": 0,
+              "qty_in_carts": 0
+            },
+            {
+              "from_date": "2018-07-26T02:43:02Z",
+              "to_date": "2018-07-28T15:59:59Z",
+              "stock_status": 1,
+              "qty_in_stock": 37,
+              "qty_in_carts": 0
+            },
+            {
+              "from_date": "2018-07-26T02:43:02Z",
+              "to_date": "2018-07-29T15:59:59Z",
+              "stock_status": 1,
+              "qty_in_stock": 48,
+              "qty_in_carts": 0
+            },
+            {
+              "from_date": "2018-07-26T02:43:02Z",
+              "to_date": "2018-07-30T15:59:59Z",
+              "stock_status": 1,
+              "qty_in_stock": 48,
+              "qty_in_carts": 0
+            },
+            {
+              "from_date": "2018-07-28T05:00:00Z",
+              "to_date": "2018-07-31T15:59:59Z",
+              "stock_status": 1,
+              "qty_in_stock": 48,
+              "qty_in_carts": 0
+            },
+            {
+              "from_date": "2018-08-01T05:00:00Z",
+              "to_date": "2018-08-30T15:59:59Z",
+              "stock_status": 1,
+              "qty_in_stock": 48,
+              "qty_in_carts": 0
+            }
+          ],
+          "next_available_date": "2018-07-26T02:43:02Z",
+          "limited_stock_status": 0,
+          "delivery_option": "standard"
+        }
+      ]
+    },
+    {
+      "category_tags": [
+        "fresh-produce",
+        "salad-herbs",
+        "tomatoes",
+        "tomatoes-243",
+        "tomatoes-5700",
+        "fresh-vegetables",
+        "tomatoes-246",
+        "tomatoes-5548",
+        "salad-vegetables-246",
+        "tomatoes-5571",
+        "tomatoes-5573",
+        "salads",
+        "salad-vegetables-5813",
+        "tomatoes-5814",
+        "tomatoes-5848",
+        "cooking-styles",
+        "western",
+        "soups",
+        "chinese-new-year",
+        "reunion-dinner-feasting",
+        "fresh-vegetables-3455",
+        "stirfry-vegetables",
+        "christmas",
+        "magical-meals",
+        "easy-platters-appetisers",
+        "canapes-dips-5334",
+        "direct-retail",
+        "fresh-produce-3455",
+        "vegetables-3475",
+        "tomatoes-cucumbers-capsicums",
+        "bbq",
+        "starter-basket",
+        "veggie-delight"
+      ],
+      "id": 42638,
+      "title": "GIVVO Local Tomatoes",
+      "desc": "Product of Malaysia. Tomatoes are widely known for their outstanding antioxidant content, including, of course, their oftentimes-rich concentration of lycopene.",
+      "sku": "8885003326287",
+      "categories": [
+        243,
+        248,
+        5700,
+        246,
+        5813,
+        5976,
+        3450,
+        3455,
+        3277,
+        5325,
+        10490,
+        12651,
+        12917,
+        14103
+      ],
+      "types": [
+        5548,
+        5814,
+        5980,
+        5978,
+        6513,
+        5334,
+        3475
+      ],
+      "details": {
+        "prod_type": 0,
+        "uri": "givvo-local-tomatoes-42638",
+        "status": 1,
+        "is_new": 0.0,
+        "storage_class": "Fresh6-10",
+        "country_of_origin": "Malaysia"
+      },
+      "product_life": {
+        "time": 5,
+        "metric": "D",
+        "is_minimum": true,
+        "time_including_delivery": 6
+      },
+      "filters": {
+        "mfr_name": "Cultured Greens",
+        "trending_frequency": 5803,
+        "is_organic": 0,
+        "country_of_origin": "Malaysia",
+        "vendor_name": "CultGrn",
+        "brand_name": "GIVVO",
+        "brand_uri": "givvo",
+        "frequency": 34492,
+        "festive_bbq": "Vegetables & Mushrooms",
+        "potluck": "Vegetables"
+      },
+      "img": {
+        "h": 0,
+        "w": 0,
+        "name": "/i/m/8885003326287_0233_1448861757039.jpg",
+        "position": 0
+      },
+      "images": [
+        {
+          "h": 0,
+          "w": 0,
+          "name": "/i/m/8885003326287_0233_1448861757039.jpg",
+          "position": 0
+        },
+        {
+          "h": 0,
+          "w": 0,
+          "name": "/i/m/8885003326287_0202_1448861752772.jpg",
+          "position": 1
+        }
+      ],
+      "measure": {
+        "wt_or_vol": "500 g",
+        "size": 0.0
+      },
+      "pricing": {
+        "on_sale": 0,
+        "price": 1.3,
+        "promo_price": 0.0,
+        "savings": 0.0
+      },
+      "warehouse": {
+        "measure": {
+          "vol_metric": "",
+          "wt": 500.0,
+          "wt_metric": "g",
+          "l": 0.0,
+          "w": 0.0,
+          "h": 0.0
+        }
+      },
+      "attributes": {
+        "dag": []
+      },
+      "description_fields": {
+        "secondary": [
+          {
+            "name": "Storage Guidelines",
+            "content": "Recommended to store at chilled temperature:1-3 degrees is highly perishable and should be transferred to cool storage immediately. Reduce stocking and practice good stock rotation to maintain freshness. Prolonged storage is not recommended."
+          }
+        ],
+        "primary": [
+          {
+            "name": "Delivery & Handling",
+            "content": "From the moment you place your order, the race for us to get your produce to you fresh and fast begins! | Time > We cut out the supermarkets from our supply chain so your food arrives faster and fresher. | Handling > Because we skip the supermarkets, food handling is greatly minimised. At RedMart, your food is handled with care by trained professionals. | Temperature > Our unbroken cold chain means your fresh produce is received, stored and delivered in optimum temperature to your doorstep. | If you are not 100% happy, we'll gladly refund you for any freshness issues. Contact Customer Support at: rm.sg/customer-support within 2 days of delivery. | Our Freshness Promise: rm.sg/freshnesspromise."
+          },
+          {
+            "name": "Country of Origin",
+            "content": "Malaysia"
+          }
+        ]
+      },
+      "max_days_on_shelf": 10,
+      "pr": 4,
+      "inventory": {
+        "atp_status": 0,
+        "max_sale_qty": 48,
+        "qty_in_carts": 0,
+        "qty_in_stock": 48,
+        "stock_status": 1,
+        "stock_type": 0,
+        "next_available_date": "2018-07-26T02:40:06Z",
+        "limited_stock_status": 0,
+        "atp_lots": [
+          {
+            "from_date": "2018-07-26T02:40:06Z",
+            "to_date": "2018-07-29T15:59:59Z",
+            "stock_status": 0,
+            "qty_in_stock": 0,
+            "qty_in_carts": 0
+          },
+          {
+            "from_date": "2018-07-26T02:40:06Z",
+            "to_date": "2018-07-30T15:59:59Z",
+            "stock_status": 1,
+            "qty_in_stock": 48,
+            "qty_in_carts": 0
+          },
+          {
+            "from_date": "2018-07-27T05:00:00Z",
+            "to_date": "2018-07-31T15:59:59Z",
+            "stock_status": 1,
+            "qty_in_stock": 48,
+            "qty_in_carts": 0
+          },
+          {
+            "from_date": "2018-07-28T05:00:00Z",
+            "to_date": "2018-08-01T15:59:59Z",
+            "stock_status": 1,
+            "qty_in_stock": 48,
+            "qty_in_carts": 0
+          },
+          {
+            "from_date": "2018-08-01T05:00:00Z",
+            "to_date": "2018-08-30T15:59:59Z",
+            "stock_status": 1,
+            "qty_in_stock": 48,
+            "qty_in_carts": 0
+          }
+        ],
+        "delivery_option": "standard"
+      },
+      "inventories": [
+        {
+          "atp_status": 0,
+          "max_sale_qty": 48,
+          "qty_in_carts": 0,
+          "qty_in_stock": 48,
+          "stock_status": 1,
+          "stock_type": 0,
+          "next_available_date": "2018-07-26T02:40:06Z",
+          "limited_stock_status": 0,
+          "atp_lots": [
+            {
+              "from_date": "2018-07-26T02:40:06Z",
+              "to_date": "2018-07-29T15:59:59Z",
+              "stock_status": 0,
+              "qty_in_stock": 0,
+              "qty_in_carts": 0
+            },
+            {
+              "from_date": "2018-07-26T02:40:06Z",
+              "to_date": "2018-07-30T15:59:59Z",
+              "stock_status": 1,
+              "qty_in_stock": 48,
+              "qty_in_carts": 0
+            },
+            {
+              "from_date": "2018-07-27T05:00:00Z",
+              "to_date": "2018-07-31T15:59:59Z",
+              "stock_status": 1,
+              "qty_in_stock": 48,
+              "qty_in_carts": 0
+            },
+            {
+              "from_date": "2018-07-28T05:00:00Z",
+              "to_date": "2018-08-01T15:59:59Z",
+              "stock_status": 1,
+              "qty_in_stock": 48,
+              "qty_in_carts": 0
+            },
+            {
+              "from_date": "2018-08-01T05:00:00Z",
+              "to_date": "2018-08-30T15:59:59Z",
+              "stock_status": 1,
+              "qty_in_stock": 48,
+              "qty_in_carts": 0
+            }
+          ],
+          "delivery_option": "standard"
+        }
+      ]
+    }
+  ],
+  "total": 130258,
+  "page": 1,
+  "page_size": 20
+}

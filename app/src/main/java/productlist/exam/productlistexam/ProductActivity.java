@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,7 +73,7 @@ public class ProductActivity extends AppCompatActivity implements ProductDetailV
 
     @Override
     public void onDataLoadFailed(String reason) {
-        // TODO: error handling
+        Toast.makeText(this, reason, Toast.LENGTH_LONG).show();
     }
 
     private void initActionBar(String productName) {
