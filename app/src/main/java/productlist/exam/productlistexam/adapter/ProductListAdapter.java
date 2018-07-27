@@ -49,6 +49,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                     productItemViewHolder.icon);
             productItemViewHolder.name.setText(product.productName);
             productItemViewHolder.price.setText(String.valueOf(product.productPricing.price));
+            productItemViewHolder.vendorName.setText(product.filter.vendorName);
         }
     }
 
@@ -61,6 +62,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
     public void clearData() {
         mProducts.clear();
+        notifyDataSetChanged();
     }
 
     public void appendData(List<Product> products) {
@@ -73,6 +75,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     public void onItemClick(int position) {
         Intent intent = new Intent(mApplicationContext, ProductActivity.class);
         intent.putExtra(Constant.KEY_PRODUCT_ID, String.valueOf(mProducts.get(position).productId));
+        intent.putExtra(Constant.KEY_PRODUCT_NAME, String.valueOf(mProducts.get(position).productName));
         mApplicationContext.startActivity(intent);
     }
 
@@ -83,6 +86,8 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         public TextView price;
         @Bind(R.id.product_icon)
         public ImageView icon;
+        @Bind(R.id.product_vendor_name)
+        public TextView vendorName;
 
         public ProductItemViewHolder(View itemView) {
             super(itemView);

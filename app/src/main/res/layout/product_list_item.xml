@@ -12,6 +12,35 @@
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/product_icon"
+        android:layout_toStartOf="@id/product_price"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/padding_size"
+        android:paddingStart="@dimen/padding_size">
+
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/product_vendor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/product_price"
         android:layout_width="40dp"
@@ -20,17 +49,5 @@
         android:layout_centerVertical="true"
         android:gravity="center_vertical|start" />
 
-    <TextView
-        android:id="@+id/product_name"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_toEndOf="@id/product_icon"
-        android:layout_toStartOf="@id/product_price"
-        android:layout_centerVertical="true"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:textSize="18sp"
-        android:paddingStart="@dimen/padding_size"
-        android:paddingEnd="@dimen/padding_size"/>
 
 </RelativeLayout>

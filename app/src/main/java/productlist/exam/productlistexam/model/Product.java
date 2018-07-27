@@ -14,4 +14,7 @@ public class Product {
 
     @SerializedName("pricing")
     public ProductPricing productPricing;
+
+    @SerializedName("filters")
+    public ProductFilter filter;
 }

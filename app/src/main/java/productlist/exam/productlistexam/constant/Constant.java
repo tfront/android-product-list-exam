@@ -5,4 +5,5 @@ public class Constant {
     public static final String IMAGE_URL_BASE = "http://media.redmart.com/newmedia/200p";
 
     public static final String KEY_PRODUCT_ID = "product_id";
+    public static final String KEY_PRODUCT_NAME = "product_name";
 }
